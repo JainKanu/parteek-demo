@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <input v-model="msg" />
-    <h1>{{ msg }}</h1>
+   <h1>Student data</h1>
     <HelloWorld :apiData="apiData" />
+  
   </div>
+
 </template>
 
 <script>

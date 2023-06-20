@@ -4,7 +4,12 @@
     <p>Input Text Form</p>
     <p>Input Text Area Form</p>
     <p>Input Number Form</p>
-    <p>Input Email Form</p>
+   
     <p>Input Checkbox Form</p>
   </div>
 </template>
+<script>
+export default{
+name:"AboutView"
+}
+</script>
