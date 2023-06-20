@@ -15,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(data, index) in apiData" :key="index">
+        <tr v-for="(data, index) in $store.state.apiData" :key="index">
           <td>
             {{ data.firstName }}
             {{ data.maidenName ? data.maidenName : "" }}
@@ -55,9 +55,6 @@
 import AboutPage from "./AboutPage";
 export default {
   name: "HelloWorld",
-  props: {
-    apiData: Array,
-  },
 };
 </script>
 

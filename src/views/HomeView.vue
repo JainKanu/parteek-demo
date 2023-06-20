@@ -1,14 +1,11 @@
 <template>
   <div class="home">
-   <h1>Student data</h1>
-    <HelloWorld :apiData="apiData" />
-  
+    <h1>Student data</h1>
+    <HelloWorld />
   </div>
-
 </template>
 
 <script>
-import axios from "axios";
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
@@ -18,24 +15,17 @@ export default {
   },
   data() {
     return {
-      apiData: [],
       msg: "Jain",
     };
   },
   mounted() {
+    this.$store.dispatch("userApiData");
     // this.firstFun("mounted");
   },
   created() {
-    this.firstFun("created");
+    // this.firstFun("created");
   },
   methods: {
-    async firstFun() {
-      // console.log("calledFrom", calledFrom);
-      await axios.get("https://dummyjson.com/users").then((response) => {
-        this.apiData = response.data.users;
-      });
-      console.log("this.apiData", this.apiData);
-    },
     secFun() {},
   },
 };
