@@ -29,7 +29,7 @@
 
 </template>
 <script>
-import { Store } from "vuex";
+
 import AboutView from "../views/AboutView.vue"
 export default{
     components: AboutView,
@@ -47,7 +47,10 @@ export default{
     },
     methods:{
         login(){
-            (this.form).push(Store.this.state.userDetail)
+        
+           this.$store.dispatch("setUserData",this.form);
+           
+            
         }
     }
    

@@ -24,7 +24,11 @@ export default new Vuex.Store( {
   mutations: {
     setApiData ( state, value ) {
       return state.apiData = value
+    }, 
+    userData ( state, value ) {
+      return state.userDetail.push(value)
     },
+    
     incNum ( state, value ) {
       return state.testNum = value
     }
@@ -35,7 +39,10 @@ export default new Vuex.Store( {
         // this.apiData = response.data.users;
         context.commit( 'setApiData', response.data.users );
       } );
-    }
+    },
+    setUserData ( context, value ) {
+      context.commit( 'userData', value );
+    },
   },
   modules: {},
 } );
